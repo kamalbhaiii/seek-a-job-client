@@ -1,5 +1,5 @@
-import Components from "../Pages/Components/Components";
-import Signin from "../Pages/Signin/Signin";
+import Components from "../Pages/components/Components";
+import Signin from "../Pages/signin/Signin";
 import Signup from "../Pages/signup/Signup";
 import Error from "../Pages/error/Error";
 
