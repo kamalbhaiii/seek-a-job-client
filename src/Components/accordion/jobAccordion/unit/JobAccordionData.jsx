@@ -10,13 +10,13 @@ const JobAccordionData = ({
 }) => {
   return (
     <Fragment>
-      <div className="grid grid-cols-4 text-xs md:text-sm lg:text-lg">
+      <div className="grid grid-cols-4 text-xs sm:text-sm md:text-md lg:text-lg">
         <div className="avatar">
           <div className="w-20 rounded">
             <img src={src} alt="logo" />
           </div>
         </div>
-        <div className="grid grid-cols-1 grid-row-2 col-span-2">
+        <div className="grid grid-cols-1 grid-rows-2 col-span-2">
           <div>
             {position} ({positionType})
           </div>

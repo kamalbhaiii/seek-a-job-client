@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Routes, Route } from "react-router-dom";
+import Footer from "./Components/footer/Footer";
 import LeftSidebarLayout from "./layout/leftSidebarLayout/LeftSidebarLayout";
 import { routes } from "./utils/routes";
 
@@ -14,6 +15,7 @@ const App = () => {
             );
           })}
         </Routes>
+        <Footer />
       </LeftSidebarLayout>
     </Fragment>
   );
