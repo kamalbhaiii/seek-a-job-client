@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import Footer from "../../Components/footer/Footer";
 import Navbar from "../../Components/navbar/Navbar";
 import Sidebar from "../../Components/sidebar/Sidebar";
 import { header } from "../../utils/header";
@@ -42,7 +41,6 @@ const LeftSidebarLayout = ({ children }) => {
           <Sidebar header={header} />
         </div>
       </div>
-      <Footer />
     </Fragment>
   );
 };

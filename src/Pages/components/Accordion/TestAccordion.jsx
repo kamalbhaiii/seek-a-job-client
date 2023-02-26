@@ -12,11 +12,21 @@ const TestAccordion = () => {
         {sampleJobData?.map((data, key) => {
           return (
             <JobAccordion key={key} data={data}>
-              <InfoCardRecruiter />
+              <InfoCardRecruiter
+                startDate={data?.startDate}
+                applyBy={data?.applyBy}
+                duration={data?.duration}
+                location={data?.location}
+                roles={data?.roles}
+                skillsRequired={data?.skillsRequired}
+                perks={data?.perks}
+                addtionalInformation={data?.additionalInformation}
+              />
             </JobAccordion>
           );
         })}
       </div>
+      <h1>Candidate Accordion</h1>
       <div className="grid gap-y-5">
         {sampleCandidateData?.map((data, key) => {
           return (
