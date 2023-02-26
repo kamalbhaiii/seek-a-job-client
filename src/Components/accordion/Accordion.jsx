@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
+import AccordionData from "./unit/AccordionData";
 
-const Accordion = () => {
+const Accordion = ({ data, children }) => {
   return (
     <Fragment>
       <div
@@ -8,10 +9,14 @@ const Accordion = () => {
         className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
       >
         <div className="collapse-title text-xl font-medium">
-          Focus me to see content
+          <AccordionData src={data?.src} />
         </div>
         <div className="collapse-content">
-          <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+          {children ? (
+            children
+          ) : (
+            <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+          )}
         </div>
       </div>
     </Fragment>
