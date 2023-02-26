@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import AccordionData from "./unit/AccordionData";
+import CandidateAccordionData from "./unit/CandidateAccordionData";
 
-const Accordion = ({ data, children }) => {
+const CandidateAccordion = ({ data, children }) => {
   return (
     <Fragment>
       <div
@@ -9,7 +9,12 @@ const Accordion = ({ data, children }) => {
         className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
       >
         <div className="collapse-title text-xl font-medium">
-          <AccordionData src={data?.src} />
+          <CandidateAccordionData
+            candidateName={data?.candidateName}
+            highestEduQualification={data?.highestQualification}
+            skills={data?.skills}
+            src={data?.src}
+          />
         </div>
         <div className="collapse-content">
           {children ? (
@@ -23,4 +28,4 @@ const Accordion = ({ data, children }) => {
   );
 };
 
-export default Accordion;
+export default CandidateAccordion;
