@@ -1,0 +1,28 @@
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/(.*)"
+        },
+        {
+            "source": "/",
+            "destination": "/"
+        },
+        {
+            "source": "/signin",
+            "destination": "/signin"
+        },
+        {
+            "source": "/signup",
+            "destination": "/signup"
+        },
+        {
+            "source": "/components",
+            "destination": "/components"
+        },
+        {
+            "source": "/job/(.*)",
+            "destination": "/job/(.*)"
+        }
+    ]
+}
