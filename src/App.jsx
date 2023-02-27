@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./Components/footer/Footer";
 import LeftSidebarLayout from "./layout/leftSidebarLayout/LeftSidebarLayout";
 import { routes } from "./utils/routes";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
@@ -15,6 +17,7 @@ const App = () => {
             );
           })}
         </Routes>
+        <ToastContainer />
         <Footer />
       </LeftSidebarLayout>
     </Fragment>
