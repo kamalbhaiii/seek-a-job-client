@@ -1,12 +1,15 @@
 import React, { Fragment, useEffect, useState } from "react";
 import LabelledOutput from "../../../output/labelledOutput/LabelledOutput";
+import { FaShare } from "react-icons/fa";
+import copy from "copy-to-clipboard";
 
-const BasicInfoBar = ({ startDate, duration, location, applyBy }) => {
+const BasicInfoBar = ({ startDate, duration, location, applyBy, id }) => {
   const [labels, setLabels] = useState({
     start_Date: "",
     duration: "",
     location: "",
     apply_by: "",
+    share: "",
   });
 
   useEffect(() => {
@@ -16,8 +19,16 @@ const BasicInfoBar = ({ startDate, duration, location, applyBy }) => {
       duration: duration,
       location: location,
       apply_by: applyBy,
+      share: (
+        <FaShare
+          onClick={(e) => {
+            e.preventDefault();
+            copy(`${import.meta.env.VITE_CLIENT_URI}/job/${id}`);
+          }}
+        />
+      ),
     });
-  }, []);
+  }, [id]);
 
   return (
     <Fragment>

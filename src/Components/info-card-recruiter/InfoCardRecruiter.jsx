@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
+import { useSelector } from "react-redux";
 import Divider from "../divider/Divider";
-import LabelledOutput from "../output/labelledOutput/LabelledOutput";
 import AdditionalInformation from "./unit/additionalInformation/AdditionalInformation/AdditionalInformation";
 import BasicInfoBar from "./unit/basicInfoBar/BasicInfoBar";
 import JobRole from "./unit/jobRole/JobRole";
@@ -17,15 +17,17 @@ const InfoCardRecruiter = ({
   perks,
   addtionalInformation,
 }) => {
+  const selectedReducer = useSelector((state) => state.selectedReducer);
   return (
     <Fragment>
       <Divider />
-      <div className="grid grid-cols-2 md:grid-cols-4 text-xs sm:text-sm md:text-md lg:text-lg gap-x-2">
+      <div className="grid grid-cols-2 md:grid-cols-5 text-xs sm:text-sm md:text-md lg:text-lg gap-x-2">
         <BasicInfoBar
           startDate={startDate}
           applyBy={applyBy}
           duration={duration}
           location={location}
+          id={selectedReducer?.jobId}
         />
       </div>
       <Divider />
