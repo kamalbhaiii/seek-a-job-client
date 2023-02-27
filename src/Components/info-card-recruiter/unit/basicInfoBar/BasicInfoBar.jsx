@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import LabelledOutput from "../../../output/labelledOutput/LabelledOutput";
 import { FaShare } from "react-icons/fa";
 import copy from "copy-to-clipboard";
+import { toast } from "react-toastify";
 
 const BasicInfoBar = ({ startDate, duration, location, applyBy, id }) => {
   const [labels, setLabels] = useState({
@@ -21,9 +22,11 @@ const BasicInfoBar = ({ startDate, duration, location, applyBy, id }) => {
       apply_by: applyBy,
       share: (
         <FaShare
+          className="cursor-pointer"
           onClick={(e) => {
             e.preventDefault();
             copy(`${import.meta.env.VITE_CLIENT_URI}/job/${id}`);
+            toast.info("Shareable link has been copied to clipboard.");
           }}
         />
       ),

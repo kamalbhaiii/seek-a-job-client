@@ -1,10 +1,6 @@
 {
     "rewrites": [
         {
-            "source": "/(.*)",
-            "destination": "/(.*)"
-        },
-        {
             "source": "/",
             "destination": "/"
         },
@@ -22,7 +18,7 @@
         },
         {
             "source": "/job/(.*)",
-            "destination": "/job/(.*)"
+            "destination": "/job"
         }
     ]
 }
