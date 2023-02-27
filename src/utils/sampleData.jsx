@@ -1,5 +1,6 @@
 export const sampleJobData = [
   {
+    _id: 2702202320050001,
     companyName: "TCS",
     position: "Full Stack Developer",
     positionType: "Internship",
@@ -20,6 +21,7 @@ export const sampleJobData = [
     perks: ["5 days a week"],
   },
   {
+    _id: 2702202320050002,
     companyName: "OYO",
     position: "Digital Marketing",
     positionType: "Internship",
@@ -41,6 +43,7 @@ export const sampleJobData = [
       "Job offer will be decided on the basis of Performance during the internship/probation period.",
   },
   {
+    _id: 2702202320050003,
     companyName: "Apple Inc.",
     position: "Software Engineer",
     positionType: "Full-time Job",
@@ -71,6 +74,7 @@ export const sampleJobData = [
 
 export const sampleCandidateData = [
   {
+    _id: 1,
     src: "https://i.kym-cdn.com/entries/icons/original/000/018/385/Rs_634x1024-130605092844-634.DespMe2.mh.060513.jpg",
     candidateName: "Kamal Sharma",
     highestQualification: "B.E in Computer Engineering",
@@ -83,6 +87,7 @@ export const sampleCandidateData = [
     ],
   },
   {
+    _id: 2,
     src: "https://i.kym-cdn.com/entries/icons/original/000/018/385/Rs_634x1024-130605092844-634.DespMe2.mh.060513.jpg",
     candidateName: "Avadhesh Sharma",
     highestQualification: "Diploma in Mechanical Engineering",
