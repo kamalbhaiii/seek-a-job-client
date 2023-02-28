@@ -21,6 +21,7 @@ export const sampleJobData = [
     perks: ["5 days a week"],
     about:
       "Tata Consultancy Services is an Indian multinational information technology services and consulting company with its headquarters in Mumbai. It is a part of the Tata Group and operates in 150 locations across 46 countries. In July 2022, it was reported that TCS had over 600,000 employees worldwide.",
+    companyUrl: "https://www.tcs.com",
   },
   {
     _id: 2702202320050002,
@@ -45,6 +46,7 @@ export const sampleJobData = [
       "Job offer will be decided on the basis of Performance during the internship/probation period.",
     about:
       "OYO Rooms, also known as OYO Hotels & Homes, is an Indian multinational hospitality chain of leased and franchised hotels, homes, and living spaces. Founded in 2012 by Ritesh Agarwal, OYO initially consisted mainly of budget hotels.",
+    companyUrl: "https://www.oyorooms.com",
   },
   {
     _id: 2702202320050003,
@@ -75,6 +77,7 @@ export const sampleJobData = [
       "Job offer will be decided on the basis of Performance during the internship/probation period.",
     about:
       "Apple Inc. is an American multinational technology company headquartered in Cupertino, California, United States.",
+    companyUrl: "https://www.apple.com",
   },
 ];
 
