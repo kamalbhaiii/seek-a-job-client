@@ -23,13 +23,12 @@ export const getJobById = (id) => {
         dispatch(jobInitialize());
         // Replace the logic return below with the actual api call.
         const reqData = sampleJobData?.filter((data, key) => data._id === id);
-        console.log(reqData, id)
+
         if (reqData && reqData.length > 0) {
-            console.log("If")
-            console.log(reqData[0])
+
             dispatch(jobSuccess(reqData[0]))
         } else {
-            console.log("else")
+
             dispatch(jobFailed("Job associated with this id isn't available."))
         }
         // Till here.

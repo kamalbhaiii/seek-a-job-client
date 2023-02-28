@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { toast } from "react-toastify";
 import JobAccordionData from "../../Components/accordion/jobAccordion/unit/JobAccordionData";
 import { jobAction } from "../../redux/index";
 import Divider from "../../Components/divider/Divider";
@@ -11,6 +10,7 @@ import SkillsRequired from "../../Components/info-card-recruiter/unit/skillsRequ
 import Perks from "../../Components/info-card-recruiter/unit/perks/Perks";
 import Error from "../error/Error";
 import AdditionalInformation from "../../Components/info-card-recruiter/unit/additionalInformation/AdditionalInformation/AdditionalInformation";
+import About from "../../Components/info-card-recruiter/unit/about/About";
 
 const JobOverview = () => {
   const location = useLocation();
@@ -25,11 +25,8 @@ const JobOverview = () => {
 
   useEffect(() => {
     if (jobReducer.loading === false) {
-      console.log(jobReducer);
       if (jobReducer.data) {
         setData(jobReducer?.data);
-      } else if (jobReducer?.err) {
-        toast.error(jobReducer.err);
       }
     }
   }, [jobReducer]);
@@ -37,7 +34,7 @@ const JobOverview = () => {
   return (
     <Fragment>
       {jobReducer?.err ? (
-        <Error />
+        <Error message={jobReducer.err} />
       ) : (
         <div className="p-5 sm:p-10 sm:pb-5 md:p-20 md:pb-5">
           <JobAccordionData
@@ -57,6 +54,10 @@ const JobOverview = () => {
               id={data?._id}
               location={data?.location}
             />
+          </div>
+          <Divider />
+          <div className="grid grid-cols-1">
+            <About about={data?.about} />
           </div>
           <Divider />
           <div className="grid grid-cols-1 text-xs sm:text-sm md:text-md lg:text-lg">
