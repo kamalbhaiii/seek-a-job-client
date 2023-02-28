@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import "./JobAccordionData.css";
+import classNames from "classnames";
 
 const JobAccordionData = ({
   src,
@@ -9,6 +10,7 @@ const JobAccordionData = ({
   companyName,
   salary,
   id,
+  className,
 }) => {
   const navigate = useNavigate();
   const handleIdClick = (id) => {
@@ -17,7 +19,12 @@ const JobAccordionData = ({
 
   return (
     <Fragment>
-      <div className="grid grid-cols-4 text-xs sm:text-sm md:text-md lg:text-lg">
+      <div
+        className={classNames(
+          "grid grid-cols-4 text-xs sm:text-sm md:text-md lg:text-lg",
+          className
+        )}
+      >
         <div className="avatar">
           <div className="w-20 rounded">
             <img src={src} alt="logo" />
