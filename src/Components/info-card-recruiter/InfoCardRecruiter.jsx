@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { useSelector } from "react-redux";
 import Divider from "../divider/Divider";
 import AdditionalInformation from "./unit/additionalInformation/AdditionalInformation/AdditionalInformation";
@@ -6,6 +6,8 @@ import BasicInfoBar from "./unit/basicInfoBar/BasicInfoBar";
 import JobRole from "./unit/jobRole/JobRole";
 import Perks from "./unit/perks/Perks";
 import SkillsRequired from "./unit/skillsRequired/SkillsRequired";
+import Button from "../button/Button";
+import Modal from "../modal/Modal";
 
 const InfoCardRecruiter = ({
   startDate,
@@ -17,6 +19,7 @@ const InfoCardRecruiter = ({
   perks,
   addtionalInformation,
 }) => {
+  const [applyModal, setApplyModal] = useState(false);
   const selectedReducer = useSelector((state) => state.selectedReducer);
   return (
     <Fragment>
@@ -51,6 +54,21 @@ const InfoCardRecruiter = ({
           </div>
         </>
       ) : null}
+      {/* <Divider /> */}
+      {/* <Button
+        color={"btn-primary"}
+        label={"Apply for this job"}
+        className="w-full"
+        onClick={(e) => {
+          e.preventDefault();
+          setApplyModal(!applyModal);
+        }}
+      />
+      <Modal
+        isActive={applyModal}
+        head={"Are you sure you want to apply for this job?"}
+        message={"Recruiter will be able to access your details."}
+      /> */}
     </Fragment>
   );
 };
