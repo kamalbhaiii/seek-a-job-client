@@ -44,6 +44,7 @@ const JobOverview = () => {
             positionType={data?.positionType}
             salary={data?.salary}
             src={data?.src}
+            companyUrl={data?.companyUrl}
           />
           <Divider />
           <div className="grid grid-cols-2 md:grid-cols-5 text-xs sm:text-sm md:text-md lg:text-lg gap-x-2">

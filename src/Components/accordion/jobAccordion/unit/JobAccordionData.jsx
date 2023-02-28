@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./JobAccordionData.css";
 import classNames from "classnames";
 
@@ -10,6 +10,7 @@ const JobAccordionData = ({
   companyName,
   salary,
   id,
+  companyUrl,
   className,
 }) => {
   const navigate = useNavigate();
@@ -34,7 +35,11 @@ const JobAccordionData = ({
           <div>
             {position} ({positionType})
           </div>
-          <div className="flex items-center">{companyName}</div>
+          <div className="flex items-center">
+            <Link className="cursor-pointer" to={companyUrl}>
+              {companyName}
+            </Link>
+          </div>
           <div className="flex gap-x-1">
             Job Id:{" "}
             <span
