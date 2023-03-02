@@ -83,7 +83,7 @@ export const sampleJobData = [
 
 export const sampleCandidateData = [
   {
-    _id: 1,
+    _id: 1911101070580203,
     src: "https://i.kym-cdn.com/entries/icons/original/000/018/385/Rs_634x1024-130605092844-634.DespMe2.mh.060513.jpg",
     candidateName: "Kamal Sharma",
     highestQualification: "B.E in Computer Engineering",
@@ -99,7 +99,7 @@ export const sampleCandidateData = [
     project: ["P-1", "P-2"],
   },
   {
-    _id: 2,
+    _id: 1911101070000203,
     src: "https://i.kym-cdn.com/entries/icons/original/000/018/385/Rs_634x1024-130605092844-634.DespMe2.mh.060513.jpg",
     candidateName: "Avadhesh Sharma",
     highestQualification: "Diploma in Mechanical Engineering",
@@ -114,7 +114,7 @@ export const sampleCandidateData = [
     project: ["P-1", "P-2", "P-3", "P-4"],
   },
   {
-    _id: 3,
+    _id: 1911101070010203,
     src: "https://i.kym-cdn.com/entries/icons/original/000/018/385/Rs_634x1024-130605092844-634.DespMe2.mh.060513.jpg",
     candidateName: "Nirmala Sharma",
     highestQualification: "Master of Arts in Home Science",
