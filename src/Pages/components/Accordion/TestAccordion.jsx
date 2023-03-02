@@ -31,7 +31,7 @@ const TestAccordion = () => {
         {sampleCandidateData?.map((data, key) => {
           return (
             <CandidateAccordion key={key} data={data}>
-              <InfoCardSeeker />
+              <InfoCardSeeker data={data} />
             </CandidateAccordion>
           );
         })}
