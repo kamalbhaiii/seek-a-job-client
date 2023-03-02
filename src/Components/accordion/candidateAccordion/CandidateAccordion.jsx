@@ -14,6 +14,7 @@ const CandidateAccordion = ({ data, children }) => {
             highestEduQualification={data?.highestQualification}
             skills={data?.skills}
             src={data?.src}
+            id={data?._id}
           />
         </div>
         <div className="collapse-content">

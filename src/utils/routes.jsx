@@ -3,6 +3,7 @@ import Signin from "../Pages/signin/Signin";
 import Signup from "../Pages/signup/Signup";
 import Error from "../Pages/error/Error";
 import JobOverview from "../Pages/job/JobOverview";
+import CandidateOverview from "../Pages/candidate/CandidateOverview";
 
 export const routes = [
   {
@@ -34,5 +35,10 @@ export const routes = [
     title: "Job Overview",
     path: "/job/:id",
     element: <JobOverview />,
+  },
+  {
+    title: "Candidate Overview",
+    path: "/candidate/:id",
+    element: <CandidateOverview />,
   },
 ];
