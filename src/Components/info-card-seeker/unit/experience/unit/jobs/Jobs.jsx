@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import ListItemOrdered from "../../../../../listItemOrdered/ListItemOrdered";
+import JobExperienceCard from "./unit/JobExperienceCard";
 
 const Jobs = ({ data }) => {
   return (
