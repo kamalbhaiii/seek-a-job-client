@@ -1,18 +1,15 @@
-import React, { Children, Fragment } from "react";
-import JobExperienceCard from "../info-card-seeker/unit/experience/unit/jobs/unit/JobExperienceCard";
+import React, { Fragment } from "react";
 import ListItem from "./unit/listItem/ListItem";
 
-const ListItemOrdered = ({ list }) => {
+const ListItemOrdered = ({ list, element: Compo, kbd = true, children }) => {
   return (
     <Fragment>
       {list?.map((item, key) => {
         return (
           <>
-            <ListItem
-              id={key + 1}
-              key={key}
-              item={<JobExperienceCard data={item} />}
-            />
+            <ListItem kbd={kbd} id={key + 1} key={key} item={item}>
+              {children}
+            </ListItem>
           </>
         );
       })}
