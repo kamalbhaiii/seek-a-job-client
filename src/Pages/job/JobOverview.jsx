@@ -45,6 +45,7 @@ const JobOverview = () => {
             salary={data?.salary}
             src={data?.src}
             companyUrl={data?.companyUrl}
+            location={data?.location}
           />
           <Divider />
           <div className="grid grid-cols-2 md:grid-cols-5 text-xs sm:text-sm md:text-md lg:text-lg gap-x-2">
@@ -53,7 +54,7 @@ const JobOverview = () => {
               applyBy={data?.applyBy}
               duration={data?.duration}
               id={data?._id}
-              location={data?.location}
+              modeOfWork={data?.modeOfWork}
             />
           </div>
           <Divider />

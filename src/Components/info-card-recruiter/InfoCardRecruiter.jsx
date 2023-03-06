@@ -13,7 +13,7 @@ const InfoCardRecruiter = ({
   startDate,
   applyBy,
   duration,
-  location,
+  modeOfWork,
   roles,
   skillsRequired,
   perks,
@@ -29,7 +29,7 @@ const InfoCardRecruiter = ({
           startDate={startDate}
           applyBy={applyBy}
           duration={duration}
-          location={location}
+          modeOfWork={modeOfWork}
           id={selectedReducer?.jobId}
         />
       </div>

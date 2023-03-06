@@ -4,11 +4,11 @@ import { FaShare } from "react-icons/fa";
 import copy from "copy-to-clipboard";
 import { toast } from "react-toastify";
 
-const BasicInfoBar = ({ startDate, duration, location, applyBy, id }) => {
+const BasicInfoBar = ({ startDate, duration, modeOfWork, applyBy, id }) => {
   const [labels, setLabels] = useState({
     start_Date: "",
     duration: "",
-    location: "",
+    mode_of_work: "",
     apply_by: "",
     share: "",
   });
@@ -18,7 +18,7 @@ const BasicInfoBar = ({ startDate, duration, location, applyBy, id }) => {
       ...labels,
       start_Date: startDate,
       duration: duration,
-      location: location,
+      mode_of_work: modeOfWork,
       apply_by: applyBy,
       share: (
         <FaShare

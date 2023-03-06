@@ -7,9 +7,9 @@ const Jobs = ({ data }) => {
     <Fragment>
       <div className="px-4">
         <label className="label font-semibold">JOB(S)</label>
-        <ListItemOrdered kbd={false} list={data.job}>
-          <JobExperienceCard />
-        </ListItemOrdered>
+        {data?.job?.map((item, key) => (
+          <JobExperienceCard data={item} />
+        ))}
       </div>
     </Fragment>
   );

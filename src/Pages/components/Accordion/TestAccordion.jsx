@@ -17,6 +17,7 @@ const TestAccordion = () => {
                 applyBy={data?.applyBy}
                 duration={data?.duration}
                 location={data?.location}
+                modeOfWork={data?.modeOfWork}
                 roles={data?.roles}
                 skillsRequired={data?.skillsRequired}
                 perks={data?.perks}
