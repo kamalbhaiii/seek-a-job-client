@@ -23,6 +23,7 @@ const JobAccordion = ({ data, children }) => {
             salary={data?.salary}
             id={data?._id}
             companyUrl={data?.companyUrl}
+            location={data?.location}
           />
         </div>
         <div className="collapse-content">

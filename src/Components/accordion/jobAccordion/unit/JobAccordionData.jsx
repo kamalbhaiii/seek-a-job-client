@@ -12,6 +12,7 @@ const JobAccordionData = ({
   id,
   companyUrl,
   className,
+  location,
 }) => {
   const navigate = useNavigate();
   const handleIdClick = (id) => {
@@ -37,7 +38,7 @@ const JobAccordionData = ({
           </div>
           <div className="flex items-center">
             <Link className="cursor-pointer" to={companyUrl}>
-              {companyName}
+              {companyName}, {location}
             </Link>
           </div>
           <div className="flex gap-x-1">

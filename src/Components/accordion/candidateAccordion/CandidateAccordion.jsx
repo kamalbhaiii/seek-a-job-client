@@ -6,7 +6,7 @@ const CandidateAccordion = ({ data, children }) => {
     <Fragment>
       <div
         tabIndex={0}
-        className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+        className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box focus:border-primary focus:border-4"
       >
         <div className="collapse-title text-xl font-medium">
           <CandidateAccordionData
