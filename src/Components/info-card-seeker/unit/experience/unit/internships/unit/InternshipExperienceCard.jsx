@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
-import ListItemOrdered from "../../../../../../listItemOrdered/ListItemOrdered";
-import Unknown from "../../../../../../../assets/images/Unknown.png";
 import {
   convertTime,
   differenceBetweenTime,
 } from "../../../../../../../helpers/timeFormat";
+import ListItemOrdered from "../../../../../../listItemOrdered/ListItemOrdered";
+import Unknown from "../../../../../../../assets/images/Unknown.png";
 import Divider from "../../../../../../divider/Divider";
 
-const JobExperienceCard = ({ data }) => {
+const InternshipExperienceCard = ({ data }) => {
   return (
     <Fragment>
       <div className="rounded bg-gray-700 p-4 w-full text-xs sm:text-sm lg:text-lg font-medium">
@@ -23,7 +23,7 @@ const JobExperienceCard = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="col-span-0 md:col-span-4 col-row-3 w-max">
+          <div className="col-span-0 md:col-span-4 col-row-3 break-words">
             <h4>{data?.position || "Position"}</h4>
             <h4 className="font-normal">
               {data?.companyName || "Company Name"}
@@ -49,4 +49,4 @@ const JobExperienceCard = ({ data }) => {
   );
 };
 
-export default JobExperienceCard;
+export default InternshipExperienceCard;
