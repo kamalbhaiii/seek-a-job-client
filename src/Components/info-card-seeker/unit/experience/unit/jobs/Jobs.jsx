@@ -8,7 +8,7 @@ const Jobs = ({ data }) => {
       <div className="px-4">
         <label className="label font-semibold">JOB(S)</label>
         {data?.job?.map((item, key) => (
-          <JobExperienceCard data={item} />
+          <JobExperienceCard data={item} key={key} />
         ))}
       </div>
     </Fragment>
