@@ -1,9 +1,10 @@
+import classNames from "classnames";
 import React, { Fragment } from "react";
 
-const Divider = () => {
+const Divider = ({ className }) => {
   return (
     <Fragment>
-      <div className="divider"></div>
+      <div className={classNames("divider", className)}></div>
     </Fragment>
   );
 };
