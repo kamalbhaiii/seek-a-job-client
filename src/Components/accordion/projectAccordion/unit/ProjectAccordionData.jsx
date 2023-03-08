@@ -3,17 +3,13 @@ import Unknown from "../../../../assets/images/Unknown.png";
 import Divider from "../../../divider/Divider";
 import ListItemOrdered from "../../../listItemOrdered/ListItemOrdered";
 ListItemOrdered;
-import {
-  convertTime,
-  dateDiffMonths,
-  dateDiffYears,
-} from "../../../../helpers/timeFormat";
+import { convertTime, dateDiffMonths } from "../../../../helpers/timeFormat";
 
 const DurationofJob = ({ data }) => {
-  return <span>{dateDiffYears(data?.joinedDate, data?.leftDate)} Years</span>;
+  return <span>{dateDiffMonths(data?.joinedDate, data?.leftDate)} Years</span>;
 };
 
-const ExperienceAccordionData = ({ data }) => {
+const ProjectAccordionData = ({ data }) => {
   return (
     <Fragment>
       <div className="rounded p-4 w-full text-xs sm:text-sm lg:text-lg font-medium">
@@ -60,4 +56,4 @@ const ExperienceAccordionData = ({ data }) => {
   );
 };
 
-export default ExperienceAccordionData;
+export default ProjectAccordionData;

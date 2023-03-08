@@ -16,7 +16,7 @@ const ExperienceCarousel = ({ data, cardShortView }) => {
       <div className="flex justify-center w-full py-2 gap-2">
         {data?.map((card, key) => {
           return (
-            <a href={`#${key + 1}`} className="btn btn-xs">
+            <a href={`#${key + 1}`} key={key} className="btn btn-xs">
               {key + 1}
             </a>
           );

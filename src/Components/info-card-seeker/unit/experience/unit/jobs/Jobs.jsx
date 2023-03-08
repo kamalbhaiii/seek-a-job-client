@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import ButtonToggle from "../../../../../button/button-toggle/ButtonToggle";
-import ExperienceCarousel from "../../../../../carousel/Carousel";
+import ExperienceCarousel from "../../../../../carousel/ExperienceCarousel";
 import ListItemOrdered from "../../../../../listItemOrdered/ListItemOrdered";
 import JobExperienceCard from "./unit/JobExperienceCard";
 
@@ -10,7 +10,7 @@ const Jobs = ({ data }) => {
     <Fragment>
       <div className="px-4">
         <label className="label font-semibold">
-          <span>JOB(S)</span>
+          <span className="text-sm">JOB(S)</span>
           <span>
             <ButtonToggle
               name={"jobs"}

@@ -5,7 +5,7 @@ const CandidateAccordion = ({ data, children }) => {
   return (
     <Fragment>
       <div className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box focus:border-primary focus:border-4">
-        <input className="w-12 absolute right-0 h-full" type="checkbox" />
+        <input className="w-12 absolute right-0 top-10" type="checkbox" />
         <div className="collapse-title text-xl font-medium">
           <CandidateAccordionData
             candidateName={data?.candidateName}
