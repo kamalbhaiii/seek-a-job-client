@@ -1,23 +1,20 @@
+import classNames from "classnames";
 import React, { Fragment } from "react";
 import ExperienceAccordionData from "./unit/ExperienceAccordionData";
 
-const ExperienceAccordion = ({ data, children }) => {
+const ExperienceAccordion = ({ data, children, className }) => {
   return (
     <Fragment>
       <div
-        tabIndex={0}
-        className="collapse collapse-arrow border border-base-300 bg-base-200 rounded-box focus:border-primary focus:border-4"
+        className={classNames(
+          "border border-base-300 bg-base-200 rounded-box w-full",
+          className
+        )}
       >
-        <div className="collapse-title text-xl font-medium">
+        <div className="text-xl font-medium">
           <ExperienceAccordionData data={data} />
         </div>
-        <div className="collapse-content">
-          {children ? (
-            children
-          ) : (
-            <p>tabIndex={0} attribute is necessary to make the div focusable</p>
-          )}
-        </div>
+        <div>{children && children}</div>
       </div>
     </Fragment>
   );

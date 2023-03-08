@@ -1,50 +1,29 @@
 import React, { Fragment } from "react";
+import JobExperienceCard from "../info-card-seeker/unit/experience/unit/jobs/unit/JobExperienceCard";
 
-const Carousel = () => {
+const ExperienceCarousel = ({ data, cardShortView }) => {
   return (
     <Fragment>
       <div className="carousel w-full">
-        <div id="item1" className="carousel-item w-full">
-          <img
-            src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-            className="w-full"
-          />
-        </div>
-        <div id="item2" className="carousel-item w-full">
-          <img
-            src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
-            className="w-full"
-          />
-        </div>
-        <div id="item3" className="carousel-item w-full">
-          <img
-            src="/images/stock/photo-1414694762283-acccc27bca85.jpg"
-            className="w-full"
-          />
-        </div>
-        <div id="item4" className="carousel-item w-full">
-          <img
-            src="/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
-            className="w-full"
-          />
-        </div>
+        {data?.map((card, key) => {
+          return (
+            <div key={key} id={key + 1} className="carousel-item w-full">
+              <JobExperienceCard cardShortView={cardShortView} data={card} />
+            </div>
+          );
+        })}
       </div>
       <div className="flex justify-center w-full py-2 gap-2">
-        <a href="#item1" className="btn btn-xs">
-          1
-        </a>
-        <a href="#item2" className="btn btn-xs">
-          2
-        </a>
-        <a href="#item3" className="btn btn-xs">
-          3
-        </a>
-        <a href="#item4" className="btn btn-xs">
-          4
-        </a>
+        {data?.map((card, key) => {
+          return (
+            <a href={`#${key + 1}`} className="btn btn-xs">
+              {key + 1}
+            </a>
+          );
+        })}
       </div>
     </Fragment>
   );
 };
 
-export default Carousel;
+export default ExperienceCarousel;
