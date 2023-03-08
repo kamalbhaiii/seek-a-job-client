@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import InternshipExperienceCard from "./unit/InternshipExperienceCard";
 import ButtonToggle from "../../../../../button/button-toggle/ButtonToggle";
-import ExperienceCarousel from "../../../../../carousel/Carousel";
+import ExperienceCarousel from "../../../../../carousel/ExperienceCarousel";
 
 const Internships = ({ data }) => {
   const [cardShortView, setCardShortView] = useState(true);
@@ -9,7 +9,7 @@ const Internships = ({ data }) => {
     <Fragment>
       <div className="px-4">
         <label className="label font-semibold">
-          <span>INTERNSHIP(S)</span>
+          <span className="text-sm">INTERNSHIP(S)</span>
           <div>
             <ButtonToggle
               name={"internship"}

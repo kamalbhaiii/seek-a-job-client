@@ -9,6 +9,10 @@ import {
   dateDiffYears,
 } from "../../../../helpers/timeFormat";
 
+const DurationofJob = ({ data }) => {
+  return <span>{dateDiffYears(data?.joinedDate, data?.leftDate)} Years</span>;
+};
+
 const ExperienceAccordionData = ({ data }) => {
   return (
     <Fragment>
@@ -25,12 +29,12 @@ const ExperienceAccordionData = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 md:col-span-5 xl:col-span-4 col-row-2">
-            <h4>{data?.position || "Position"}</h4>
-            <h4 className="font-normal">
+          <div className="col-span-2 md:col-span-5 xl:col-span-4 grid-rows-2">
+            <div>{data?.position || "Position"}</div>
+            <div className="font-normal">
               {data?.companyName || "Company Name"}
               {data?.location && `, ${data.location}`}
-            </h4>
+            </div>
           </div>
           <div className="hidden col-span-0 md:block md:col-span-2 grid-row-3 w-max gap-y-0">
             <div>
@@ -39,9 +43,17 @@ const ExperienceAccordionData = ({ data }) => {
             </div>
             <Divider className={"my-0"} />
             <div className="text-center">
-              {dateDiffYears(data?.joinedDate, data?.leftDate)} Years
+              <DurationofJob data={data} />
             </div>
           </div>
+        </div>
+        <div className="md:hidden text-xs text-center">
+          <span>
+            {convertTime(data?.joinedDate, "MMM, YYYY")} -{" "}
+            {convertTime(data?.leftDate, "MMM, YYYY") || "Present"}
+          </span>
+          {" | "}
+          <DurationofJob data={data} />
         </div>
       </div>
     </Fragment>
