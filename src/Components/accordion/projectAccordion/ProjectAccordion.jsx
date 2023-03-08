@@ -12,7 +12,7 @@ const ProjectAccordion = ({ data, children, className }) => {
         )}
       >
         <div className="text-xl font-medium">
-          <ExperienceAccordionData data={data} />
+          <ProjectAccordionData data={data} />
         </div>
         <div>{children && children}</div>
       </div>
