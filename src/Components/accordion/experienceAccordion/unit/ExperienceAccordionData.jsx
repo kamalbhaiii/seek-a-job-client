@@ -14,9 +14,9 @@ const ExperienceAccordionData = ({ data }) => {
     <Fragment>
       <div className="rounded p-4 w-full text-xs sm:text-sm lg:text-lg font-medium">
         <div className="grid grid-cols-3 md:grid-cols-8">
-          <div className="col-span-0 md:col-span-2">
+          <div className="col-span-0 xl:col-span-2">
             <div className="avatar">
-              <div className="w-20">
+              <div className="w-full md:w-20">
                 <img
                   className="h-max w-max"
                   alt={"company_logo"}
@@ -25,14 +25,14 @@ const ExperienceAccordionData = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="col-span-0 md:col-span-4 col-row-2 w-max">
+          <div className="col-span-2 md:col-span-5 xl:col-span-4 col-row-2">
             <h4>{data?.position || "Position"}</h4>
             <h4 className="font-normal">
               {data?.companyName || "Company Name"}
               {data?.location && `, ${data.location}`}
             </h4>
           </div>
-          <div className="col-span-0 md:col-span-2 grid-row-3 w-max gap-y-0">
+          <div className="hidden col-span-0 md:block md:col-span-2 grid-row-3 w-max gap-y-0">
             <div>
               {convertTime(data?.joinedDate, "MMM, YYYY")} -{" "}
               {convertTime(data?.leftDate, "MMM, YYYY") || "Present"}

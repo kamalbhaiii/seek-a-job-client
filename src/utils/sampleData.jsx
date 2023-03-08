@@ -141,6 +141,14 @@ export const sampleCandidateData = [
         joinedDate: new Date("3 march 2021"),
         leftDate: new Date("1 december 2022"),
       },
+      {
+        position: "QA Tester",
+        companyName: "TCS",
+        roles: ["Selenium with Java", "Cypress Automation", "Mocha", "Chai"],
+        location: "Heyderabad, India",
+        joinedDate: new Date("3 march 2021"),
+        leftDate: new Date("1 december 2022"),
+      },
     ],
     internship: [
       {
