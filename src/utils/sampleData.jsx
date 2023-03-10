@@ -169,7 +169,26 @@ export const sampleCandidateData = [
         leftDate: new Date("1 december 2022"),
       },
     ],
-    project: ["P-1", "P-2", "P-3", "P-4", "P-5", "P-6"],
+    project: [
+      {
+        headline: "Portfolio Web",
+        description:
+          "This is my portfolio website which i have made using ReactJs.",
+        topics: ["HTML", "CSS", "JS", "NextJs"],
+        joinedDate: new Date("3 march 2021"),
+        leftDate: new Date("1 december 2022"),
+        projectLink: "https://github.com/Kamal040102",
+      },
+      {
+        headline: "Seek-a-Job",
+        description:
+          "Seek-a-Job is a online job protal which comees with the best functionalities in the world and enhance the experience of finding the right jobs and candidates for job seekers and recruiters respectively. This project is made using the MERN Stack technology and in future many more functionality are gonna be implemented.",
+        topics: ["HTML", "CSS", "JS", "NextJs"],
+        joinedDate: new Date("3 march 2021"),
+        leftDate: new Date("1 december 2022"),
+        projectLink: "https://github.com/Kamal040102",
+      },
+    ],
     schooling: ["DCHS"],
     work: ["Work-1", "Work-2"],
     achievement: ["Ach-1"],

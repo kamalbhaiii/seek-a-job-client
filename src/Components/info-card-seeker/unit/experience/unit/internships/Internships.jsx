@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import InternshipExperienceCard from "./unit/InternshipExperienceCard";
 import ButtonToggle from "../../../../../button/button-toggle/ButtonToggle";
-import ExperienceCarousel from "../../../../../carousel/ExperienceCarousel";
+import JobExperienceCarousel from "../../../../../carousel/JobExperienceCarousel";
 
 const Internships = ({ data }) => {
   const [cardShortView, setCardShortView] = useState(true);
@@ -24,7 +24,8 @@ const Internships = ({ data }) => {
             />
           </div>
         </label>
-        <ExperienceCarousel
+        <JobExperienceCarousel
+          id="internship"
           cardShortView={cardShortView}
           data={data?.internship}
         />

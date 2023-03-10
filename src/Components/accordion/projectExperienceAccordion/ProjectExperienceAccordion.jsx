@@ -1,8 +1,8 @@
-import classNames from "classnames";
 import React, { Fragment } from "react";
-import ProjectAccordionData from "./unit/ProjectAccordionData";
+import classNames from "classnames";
+import ProjectAccordionData from "./unit/ProjectExperienceAccordionData";
 
-const ProjectAccordion = ({ data, children, className }) => {
+const ProjectExperienceAccordion = ({ data, className, children }) => {
   return (
     <Fragment>
       <div
@@ -20,4 +20,4 @@ const ProjectAccordion = ({ data, children, className }) => {
   );
 };
 
-export default ProjectAccordion;
+export default ProjectExperienceAccordion;

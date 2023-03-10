@@ -4,12 +4,13 @@ import Divider from "../../../divider/Divider";
 import ListItemOrdered from "../../../listItemOrdered/ListItemOrdered";
 ListItemOrdered;
 import { convertTime, dateDiffMonths } from "../../../../helpers/timeFormat";
+import { Link } from "react-router-dom";
 
 const DurationofJob = ({ data }) => {
-  return <span>{dateDiffMonths(data?.joinedDate, data?.leftDate)} Years</span>;
+  return <span>{dateDiffMonths(data?.joinedDate, data?.leftDate)} Months</span>;
 };
 
-const ProjectAccordionData = ({ data }) => {
+const ProjectExperienceAccordionData = ({ data }) => {
   return (
     <Fragment>
       <div className="rounded p-4 w-full text-xs sm:text-sm lg:text-lg font-medium">
@@ -25,13 +26,17 @@ const ProjectAccordionData = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 md:col-span-5 xl:col-span-4 grid-rows-2">
-            <div>{data?.position || "Position"}</div>
-            <div className="font-normal">
-              {data?.companyName || "Company Name"}
-              {data?.location && `, ${data.location}`}
+          {data?.projectLink && (
+            <div className="col-span-2 md:col-span-5 xl:col-span-4 grid-rows-2">
+              <div>{data?.headline || "Project Name"}</div>
+              <Link
+                to={`${data?.projectLink}`}
+                className="font-normal text-primary underline hover:text-white break-words"
+              >
+                {data?.projectLink}
+              </Link>
             </div>
-          </div>
+          )}
           <div className="hidden col-span-0 md:block md:col-span-2 grid-row-3 w-max gap-y-0">
             <div>
               {convertTime(data?.joinedDate, "MMM, YYYY")} -{" "}
@@ -56,4 +61,4 @@ const ProjectAccordionData = ({ data }) => {
   );
 };
 
-export default ProjectAccordionData;
+export default ProjectExperienceAccordionData;

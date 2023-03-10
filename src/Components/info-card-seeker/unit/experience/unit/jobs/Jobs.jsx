@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import ButtonToggle from "../../../../../button/button-toggle/ButtonToggle";
-import ExperienceCarousel from "../../../../../carousel/ExperienceCarousel";
+import JobExperienceCarousel from "../../../../../carousel/JobExperienceCarousel";
 import ListItemOrdered from "../../../../../listItemOrdered/ListItemOrdered";
 import JobExperienceCard from "./unit/JobExperienceCard";
 
@@ -25,7 +25,11 @@ const Jobs = ({ data }) => {
             />
           </span>
         </label>
-        <ExperienceCarousel cardShortView={cardShortView} data={data?.job} />
+        <JobExperienceCarousel
+          id="job"
+          cardShortView={cardShortView}
+          data={data?.job}
+        />
       </div>
     </Fragment>
   );
