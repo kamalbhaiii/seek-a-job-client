@@ -9,7 +9,7 @@ const JobExperienceCard = ({ data, cardShortView }) => {
       <ExperienceAccordion data={data}>
         <h4
           className={classNames(
-            "font-light w-max text-xs mx-10",
+            "font-light w-max text-xs mx-10 mb-10",
             cardShortView ? "hidden" : "block"
           )}
         >
