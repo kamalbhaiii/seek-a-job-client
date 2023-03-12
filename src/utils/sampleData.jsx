@@ -119,10 +119,11 @@ export const sampleCandidateData = [
   {
     _id: 1911101070010203,
     src: "https://i.kym-cdn.com/entries/icons/original/000/018/385/Rs_634x1024-130605092844-634.DespMe2.mh.060513.jpg",
-    candidateName: "Nirmala Sharma",
-    highestQualification: "Master of Arts in Home Science",
-    skills: ["Home Maker", "BA Home Science", "MA Home Science"],
-    about: "This is about Nirmala Sharma.",
+    candidateName: "Kamal Sharma",
+    highestQualification: "BE Computer Enginnering",
+    skills: ["Full Stack Developer", "Computer Engineer", "Data Analyst"],
+    about:
+      "I am a last year under graduate, Computer Engineering student and Data Science Enthusiast. I have worked as an intern in various companies as a Data Science Trainee, also I am an intermediate Full-Stack Web Developer and learning daily to improve my self. Currently I am focusing more towards learning the fundamentals of Data Science and creating my own Metaverse and I worked as a Software Engineer Associate at Blackcoffer (OPC) Pvt. Ltd. for the duration of July-2022 till Dec-2022.",
     job: [
       {
         position: "Full Stack Developer",
@@ -147,7 +148,7 @@ export const sampleCandidateData = [
         roles: ["Selenium with Java", "Cypress Automation", "Mocha", "Chai"],
         location: "Heyderabad, India",
         joinedDate: new Date("3 march 2021"),
-        leftDate: new Date("1 december 2022"),
+        // leftDate: new Date("1 december 2022"),
       },
     ],
     internship: [
@@ -165,8 +166,8 @@ export const sampleCandidateData = [
           "MySQL",
         ],
         location: "Heyderabad, India",
-        joinedDate: new Date("3 march 2021"),
-        leftDate: new Date("1 december 2022"),
+        joinedDate: new Date("30 january 2023"),
+        // leftDate: new Date("1 december 2022"),
       },
     ],
     project: [
@@ -176,7 +177,7 @@ export const sampleCandidateData = [
           "This is my portfolio website which i have made using ReactJs.",
         topics: ["HTML", "CSS", "JS", "NextJs"],
         joinedDate: new Date("3 march 2021"),
-        leftDate: new Date("1 december 2022"),
+        // leftDate: new Date("1 december 2022"),
         projectLink: "https://github.com/Kamal040102/portfolio-web",
       },
       {
@@ -189,7 +190,44 @@ export const sampleCandidateData = [
         projectLink: "https://github.com/Kamal040102/seek-a-job-client",
       },
     ],
-    schooling: ["DCHS"],
+    schooling: [
+      {
+        position: "10th Examination",
+        companyName: "DCHS",
+        location: "Surat, Gujarat",
+        joinedDate: new Date("1 april 2016"),
+        leftDate: new Date("31 march 2017"),
+        board: "CBSE",
+        topics: [
+          "English",
+          "Hindi",
+          "Maths",
+          "Science",
+          "Social Science",
+          "7.2 CGPA",
+        ],
+      },
+      {
+        position: "12th Examination",
+        companyName: "DCHS",
+        location: "Surat, Gujarat",
+        joinedDate: new Date("1 april 2018"),
+        leftDate: new Date("31 march 2019"),
+        board: "CBSE",
+        topics: ["Physics", "Chemistry", "Maths", "79%"],
+      },
+    ],
+    degree: [
+      {
+        position: "Bachelor's of Engineering",
+        companyName: "Gujarat Technological University",
+        location: "Ahmedabad, Gujarat",
+        joinedDate: new Date("1 august 2019"),
+        leftDate: new Date("31 july 2023"),
+        board: "Computer Engg.",
+        topics: ["8.2 CPI", "DSA", "OOPs", "DAA"],
+      },
+    ],
     work: ["Work-1", "Work-2"],
     achievement: ["Ach-1"],
   },

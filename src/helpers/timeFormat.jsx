@@ -10,11 +10,11 @@ export const convertTimeFromNow = (time, format) => {
 };
 
 export const dateDiffMonths = (time1, time2) => {
-  let diff = new DateDiff(time2, time1);
+  let diff = new DateDiff(time2 ? time2 : new Date(), time1);
   return Math.ceil(diff.months());
 };
 
 export const dateDiffYears = (time1, time2) => {
-  let diff = new DateDiff(time2, time1);
+  let diff = new DateDiff(time2 ? time2 : new Date(), time1);
   return diff.years();
 };
