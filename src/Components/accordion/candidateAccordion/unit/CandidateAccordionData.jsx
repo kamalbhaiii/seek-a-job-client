@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import Badge from "../../../badge/Badge";
 import Ellipse from "../../../../helpers/ellipsis";
 import { useNavigate } from "react-router-dom";
+import Avatar from "../../../avatar/Avatar";
 
 const CandidateAccordionData = ({
   src,
@@ -17,11 +18,7 @@ const CandidateAccordionData = ({
   return (
     <Fragment>
       <div className="grid grid-cols-4 text-xs sm:text-sm md:text-md lg:text-lg">
-        <div className="avatar">
-          <div className="w-20 rounded">
-            <img src={src} alt="logo" />
-          </div>
-        </div>
+        <Avatar src={src} />
         <div className="grid grid-cols-1 grid-rows-3 col-span-2 gap-y-2">
           <div>{candidateName}</div>
           <div>{highestEduQualification}</div>

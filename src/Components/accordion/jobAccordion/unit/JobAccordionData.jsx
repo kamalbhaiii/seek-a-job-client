@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./JobAccordionData.css";
 import classNames from "classnames";
+import Avatar from "../../../avatar/Avatar";
 
 const JobAccordionData = ({
   src,
@@ -27,11 +28,7 @@ const JobAccordionData = ({
           className
         )}
       >
-        <div className="avatar">
-          <div className="w-20 rounded">
-            <img src={src} alt="logo" />
-          </div>
-        </div>
+        <Avatar src={src} />
         <div className="grid grid-cols-1 grid-rows-3 col-span-2">
           <div>
             {position} ({positionType})

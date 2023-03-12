@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import JobExperienceCarousel from "../../../../../carousel/JobExperienceCarousel";
 import ListItemOrdered from "../../../../../listItemOrdered/ListItemOrdered";
 
 const Degree = ({ data }) => {
@@ -6,7 +7,7 @@ const Degree = ({ data }) => {
     <Fragment>
       <div className="px-4">
         <label className="label font-semibold">DEGREE(S)</label>
-        <ListItemOrdered list={data.degree} />
+        <JobExperienceCarousel data={data?.degree} id={"degree"} />
       </div>
     </Fragment>
   );

@@ -7,14 +7,16 @@ const JobExperienceCard = ({ data, cardShortView }) => {
   return (
     <Fragment>
       <ExperienceAccordion data={data}>
-        <h4
-          className={classNames(
-            "font-light w-max text-xs mx-10 mb-10",
-            cardShortView ? "hidden" : "block"
-          )}
-        >
-          <ListItemOrdered list={data?.roles || [1, 2, 3]} />
-        </h4>
+        {data?.roles && (
+          <h4
+            className={classNames(
+              "font-light w-max text-xs mx-10 mb-10",
+              cardShortView ? "hidden" : "block"
+            )}
+          >
+            <ListItemOrdered list={data?.roles} />
+          </h4>
+        )}
       </ExperienceAccordion>
     </Fragment>
   );

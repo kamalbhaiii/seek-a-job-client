@@ -29,7 +29,9 @@ const ProjectExperienceAccordionData = ({ data }) => {
           <div className="hidden col-span-0 md:block md:col-span-2 grid-row-3 w-max gap-y-0">
             <div>
               {convertTime(data?.joinedDate, "MMM, YYYY")} -{" "}
-              {convertTime(data?.leftDate, "MMM, YYYY") || "Present"}
+              {data?.leftDate
+                ? convertTime(data?.leftDate, "MMM, YYYY")
+                : "Present"}
             </div>
             <Divider className={"my-0"} />
             <div className="text-center">
