@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import ProjectExperienceAccordion from "../../../../../../accordion/projectExperienceAccordion/ProjectExperienceAccordion";
 import classNames from "classnames";
+import Badge from "../../../../../../badge/Badge";
 
 const ProjectExperienceCard = ({ data, cardShortView }) => {
   return (
@@ -12,8 +13,22 @@ const ProjectExperienceCard = ({ data, cardShortView }) => {
             cardShortView ? "hidden" : "flex"
           )}
         >
-          <div className="grid grid-cols-8">
-            <div className="col-start-2 col-end-8">{data?.description}</div>
+          <div className="grid grid-cols-8 gap-y-2">
+            <div className="col-start-2 col-end-8 h-max">
+              {data?.topics?.map((topic, key) => {
+                return (
+                  <Badge
+                    className={"mx-2"}
+                    type={"info"}
+                    text={topic}
+                    key={key}
+                  />
+                );
+              })}
+            </div>
+            <div className="col-start-2 col-end-8 text-xs sm:text-sm">
+              {data?.description}
+            </div>
           </div>
         </h4>
       </ProjectExperienceAccordion>

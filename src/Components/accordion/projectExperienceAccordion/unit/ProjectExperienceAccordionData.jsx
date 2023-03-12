@@ -15,28 +15,17 @@ const ProjectExperienceAccordionData = ({ data }) => {
     <Fragment>
       <div className="rounded p-4 w-full text-xs sm:text-sm lg:text-lg font-medium">
         <div className="grid grid-cols-3 md:grid-cols-8">
-          <div className="col-span-0 xl:col-span-2">
-            <div className="avatar">
-              <div className="w-full md:w-20">
-                <img
-                  className="h-max w-max"
-                  alt={"company_logo"}
-                  src={data?.src || Unknown}
-                />
-              </div>
-            </div>
-          </div>
-          {data?.projectLink && (
-            <div className="col-span-2 md:col-span-5 xl:col-span-4 grid-rows-2">
-              <div>{data?.headline || "Project Name"}</div>
+          <div className="col-span-8 md:col-span-6 grid-rows-2 mb-4 md:mb-0">
+            <div>{data?.headline || "Project Name"}</div>
+            {data?.projectLink && (
               <Link
                 to={`${data?.projectLink}`}
                 className="font-normal text-primary underline hover:text-white break-words"
               >
                 {data?.projectLink}
               </Link>
-            </div>
-          )}
+            )}
+          </div>
           <div className="hidden col-span-0 md:block md:col-span-2 grid-row-3 w-max gap-y-0">
             <div>
               {convertTime(data?.joinedDate, "MMM, YYYY")} -{" "}
