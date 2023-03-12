@@ -228,6 +228,21 @@ export const sampleCandidateData = [
         topics: ["8.2 CPI", "DSA", "OOPs", "DAA"],
       },
     ],
+    certification: [
+      {
+        position: "Full Stack Development",
+        companyName: "Skill Safari",
+        location: "Bangalore, Karnataka",
+        joinedDate: new Date("1 august 2019"),
+        // leftDate: new Date("31 july 2023"),
+        board: "123456789",
+        topics: [
+          "MERN Stack",
+          "Bootstrap CSS",
+          "E-commerce Game Store Project",
+        ],
+      },
+    ],
     work: ["Work-1", "Work-2"],
     achievement: ["Ach-1"],
   },
