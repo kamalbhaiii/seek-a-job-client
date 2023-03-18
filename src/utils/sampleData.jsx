@@ -204,7 +204,7 @@ export const sampleCandidateData = [
           "Maths",
           "Science",
           "Social Science",
-          "7.2 CGPA",
+          "7.6 CGPA",
         ],
       },
       {
@@ -244,6 +244,6 @@ export const sampleCandidateData = [
       },
     ],
     work: ["Work-1", "Work-2"],
-    achievement: ["Ach-1"],
+    achievement: ["Ach-1", "Ach-2", "Ach-3"],
   },
 ];
