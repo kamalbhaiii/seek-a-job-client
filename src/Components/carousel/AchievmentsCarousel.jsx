@@ -12,7 +12,6 @@ const AchievmentsCarousel = ({ data, id }) => {
               id={`${id}-${key + 1}`}
               className="carousel-item w-full"
             >
-              {/* <JobExperienceCard cardShortView={cardShortView} data={card} /> */}
               <AchievmentCard data={card} />
             </div>
           );
