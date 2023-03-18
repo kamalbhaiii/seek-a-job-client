@@ -4,7 +4,6 @@ import Achievements from "./unit/achievements/Achievements";
 import BasicInfo from "./unit/basicInfo/BasicInfo";
 import EducationalQualification from "./unit/educationalQualification/EducationalQualification";
 import Experience from "./unit/experience/Experience";
-import WorkSamples from "./unit/workSamples/WorkSamples";
 
 const InfoCardSeeker = ({ data }) => {
   return (
@@ -23,14 +22,9 @@ const InfoCardSeeker = ({ data }) => {
           <EducationalQualification data={data} />
         </>
       ) : null}
-      {data.work ? (
-        <>
-          <Divider />
-          <WorkSamples data={data} />
-        </>
-      ) : null}
       {data.achievement ? (
         <>
+          <Divider />
           <Achievements data={data} />
         </>
       ) : null}
